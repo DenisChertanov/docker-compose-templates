@@ -5,6 +5,5 @@ services:
     image: gvenzl/oracle-xe:21.3.0
     container_name: oracle-db
     ports:
-      - "3333:1521"
-      - "3334:5500"
+      - "1521:1521"
     restart: unless-stopped
