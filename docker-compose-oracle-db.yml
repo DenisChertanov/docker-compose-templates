@@ -4,6 +4,8 @@ services:
   oracle-db:
     image: gvenzl/oracle-xe:21.3.0
     container_name: oracle-db
+    environment:
+      ORACLE_PASSWORD: password
     ports:
       - "1521:1521"
     restart: unless-stopped
