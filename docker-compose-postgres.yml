@@ -4,6 +4,7 @@ services:
   postgres:
     image: postgres:14
     container_name: postgres
+    shm_size: '1g'
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -11,3 +12,5 @@ services:
     ports:
       - "5432:5432"
     restart: unless-stopped
+    volumes:
+      - /path_to_local_volume:/var/lib/postgresql/data
